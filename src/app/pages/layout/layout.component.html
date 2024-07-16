@@ -1,0 +1,31 @@
+<nav class="bg-gray-800 p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <div class="text-white text-lg font-bold">
+        <!-- <a href="#">MyApp</a> -->
+         <h1 [routerLink]="['dashboard']" >My App</h1>
+      </div>
+      <div class="hidden md:flex space-x-4 cursor-pointer">
+        <p [routerLink]='["home"]' class="text-gray-300 hover:text-white">Home</p>
+        <p href="#" class="text-gray-300 hover:text-white">About</p>
+        <p [routerLink]='["all-users"]'class="text-gray-300 hover:text-white">All_Users</p>
+        <p href="#" class="text-gray-300 hover:text-white">Contact</p>
+        <button class="text-white bg-blue-500 px-3 py-2 rounded-lg flex items-center" (click)="signOut()">Logout</button>
+      </div>
+      <div class="md:hidden">
+        <button id="menu-button" class="text-gray-300 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden">
+      <a href="#" class="block text-gray-300 hover:text-white px-4 py-2">Home</a>
+      <a href="#" class="block text-gray-300 hover:text-white px-4 py-2">About</a>
+      <a href="#" class="block text-gray-300 hover:text-white px-4 py-2">Services</a>
+      <a href="#" class="block text-gray-300 hover:text-white px-4 py-2">Contact</a>
+    </div>
+  </nav>
+
+  <router-outlet />
+  
